@@ -22,8 +22,43 @@
         {% block content %}{% endblock %}
     </main>
 
-    <footer>
-        <p>© 2025 ITR Coup</p>
-    </footer>
+    <footer class="footer">
+    <div class="footer-col">
+        <h2 class="logo">ITR<br>COUP</h2>
+        <a href="https://www.instagram.com/coparenault" target="_blank">
+            <img src="{{ url_for('static', filename='img/instagram-icon.png') }}" alt="Instagram" class="social-icon">
+        </a>
+    </div>
+
+    <div class="footer-col">
+        <h3>INFORMACIÓN IMPORTANTE DEL EVENTO</h3>
+        <p><strong>Día:</strong> Viernes 16 de mayo</p>
+        <p><strong>Horario:</strong> 8 a 17h</p>
+        <p><strong>Lugar:</strong> Instituto Técnico Renault</p>
+    </div>
+
+    <div class="footer-col">
+        <h3>CONTACTANOS</h3>
+        <p>Dirección: Av. Renault<br>Argentino 2630, Córdoba</p>
+        <p>Instagram: @coparenault</p>
+        <p>Tel: 0351 589-8153</p>
+    </div>
+
+    <div class="footer-col">
+        <h3>MENU</h3>
+        <ul>
+            <li><a href="{{ url_for('nosotros') }}">Sobre nosotros</a></li>
+            <li><a href="{{ url_for('informacion') }}">Información</a></li>
+            <li><a href="{{ url_for('entradas') }}">Entradas</a></li>
+            <li><a href="{{ url_for('deportes') }}">Deportes</a></li>
+        </ul>
+
+        <h3>DESCARGA NUESTRA APP EN</h3>
+        <a href="#" target="_blank">
+            <img src="{{ url_for('static', filename='img/playstore.png') }}" alt="Descargar en Play Store" class="store-icon">
+        </a>
+    </div>
+</footer>
+
 </body>
 </html>

@@ -29,14 +29,58 @@ main {
     padding: 2rem;
 }
 
-footer {
-    background: #000000;
-    color:  rgb(255, 225, 0);;
-    text-align: center;
-    padding: 1rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+.footer {
+    background-color: #0f0f0f;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 40px 60px;
+    font-size: 0.95em;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 220px;
+    margin-bottom: 20px;
+}
+
+.footer-col h2.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.footer-col h3 {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-col p {
+    margin: 5px 0;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.footer-col ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-icon,
+.store-icon {
+    width: 30px;
+    margin-top: 10px;
 }
 
 .fixture-grid {
@@ -57,4 +101,89 @@ footer {
     flex-direction: column;
     gap: 1rem;
     max-width: 300px;
+}
+.sobre-nosotros {
+    background-image: url('./img/fondo-nosotros.jpg'); /* Ajustá el nombre del archivo */
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+    padding: 60px 30px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+    border-radius: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.sobre-nosotros h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.sobre-nosotros p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+.entradas {
+    text-align: center;
+    background-color: #f0d85d;
+    padding: 60px 30px;
+}
+
+.entradas h1 {
+    font-size: 2.5em;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    border-bottom: 3px solid #000;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.entradas .volver {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.entradas p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.opciones {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.opcion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.opcion-img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.boton {
+    display: inline-block;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
 }
