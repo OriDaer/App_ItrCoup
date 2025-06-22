@@ -10,11 +10,11 @@
     <div class="opciones">
         <div class="opcion">
             <img class="opcion-img" src="{{ url_for('static', filename='static/img/fondo-nosotros.jpg') }}" alt="Entrada general">
-            <a href="#" class="boton">COMPRAR ENTRADA GENERAL</a>
+            <a href="{{url_for('entrada_general') }}" class="boton">COMPRAR ENTRADA GENERAL</a>
         </div>
         <div class="opcion">
             <img class="opcion-img" src="{{ url_for('static', filename='img/copa renault.png') }}" alt="Inscripción equipo">
-            <a href="#" class="boton">INSCRIPCIÓN DE MI EQUIPO</a>
+            <a href="{{ url_for('inscripcion_equipo') }}"  class="boton">INSCRIPCIÓN DE MI EQUIPO</a>
         </div>
     </div>
 </section>

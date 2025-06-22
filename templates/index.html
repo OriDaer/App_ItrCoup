@@ -1,8 +1,27 @@
 {% extends 'base.html' %}
 {% block title %}Inicio - ITR Coup{% endblock %}
+
 {% block content %}
+
+<!-- Sección principal -->
 <section class="welcome">
-    <h2>ITR COUP</h2>
-    <p>El evento intercolegail mas grande de cordoba, Argentina.</p>
+    <div class="welcome-text">
+        <h2>ITR COUP</h2>
+        <p>El evento deportivo intercolegial más grande de todo Córdoba, Argentina.</p>
+        <a href="{{ url_for('informacion') }}" class="boton-blanco">VER MÁS →</a>
+    </div>
 </section>
+
+<!-- Sección "Sobre Nosotros" de inicio -->
+<section class="sobre-nosotros-preview">
+    <div class="texto">
+        <h3>SOBRE NOSOTROS</h3>
+        <p>La Copa Renault es un torneo intercolegial organizado por el Instituto Técnico Renault. Cada año reúne a colegios de toda la provincia para competir en distintas disciplinas deportivas, promoviendo la inclusión, la convivencia y el disfrute en un entorno seguro, con actividades recreativas y momentos emblemáticos como el tradicional “Banderazo”.</p>
+        <a href="{{ url_for('nosotros') }}" class="boton-amarillo">SABER MÁS →</a>
+    </div>
+    <div class="imagen">
+    <img src="{{ url_for('static', filename='img/SNosotros-preview.png') }}" alt="Estudiantes con bombos">
+    </div>
+</section>
+
 {% endblock %}

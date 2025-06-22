@@ -1,4 +1,5 @@
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
@@ -26,6 +27,12 @@ def login():
 def deportes():
     return render_template("deportes.html")
 
+@app.route('/entrada-general')
+def entrada_general():
+    return render_template("entrada-general.html")
+@app.route('/inscripcion-equipo')
+def inscripcion_equipo():
+    return render_template("inscripcion-equipo.html")
 if __name__ == '__main__':
     app.run(debug=True)
     

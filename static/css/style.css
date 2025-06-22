@@ -2,9 +2,9 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #f0f0f0;
 }
 
+/* HEADER */
 header {
     background-color: #000000;
     color: rgb(255, 225, 0);
@@ -25,10 +25,7 @@ nav a {
     text-decoration: none;
 }
 
-main {
-    padding: 2rem;
-}
-
+/* FOOTER */
 .footer {
     background-color: #0f0f0f;
     color: white;
@@ -83,6 +80,7 @@ main {
     margin-top: 10px;
 }
 
+/* FIXTURE */
 .fixture-grid {
     display: flex;
     flex-direction: column;
@@ -96,23 +94,22 @@ main {
     box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
 }
 
+/* LOGIN */
 .login form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     max-width: 300px;
 }
+
+/* SECCIÓN SOBRE NOSOTROS INTERNA */
 .sobre-nosotros {
-    background-image: url('./img/fondo-nosotros.jpg'); /* Ajustá el nombre del archivo */
+    background-image: url('./img/fondo-nosotros.jpg');
     background-size: cover;
     background-position: center;
-
-    color: white;
+    color: rgb(224, 201, 101);
     padding: 60px 30px;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
-    border-radius: 20px;
-    max-width: 1000px;
-    margin: auto;
+    min-height: 100vh;
 }
 
 .sobre-nosotros h2 {
@@ -128,6 +125,8 @@ main {
     line-height: 1.8;
     margin-bottom: 20px;
 }
+
+/* ENTRADAS */
 .entradas {
     text-align: center;
     background-color: #f0d85d;
@@ -186,4 +185,91 @@ main {
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
+}
+
+/* PÁGINA INICIO - BIENVENIDA */
+.welcome {
+    background-image: url('/static/img/portada-trofeo.jpg'); /* Cambiá esta ruta si es necesario */
+    background-size: cover;
+    background-position: center;
+    color: black;
+    padding: 100px 30px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.welcome-text {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+}
+
+.welcome-text h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.welcome-text p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.boton-blanco {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid black;
+}
+
+.sobre-nosotros-preview {
+    display: flex;
+    background-color: #f7db5d;
+    padding: 60px 30px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.sobre-nosotros-preview .texto {
+    flex: 1;
+    max-width: 500px;
+}
+
+.sobre-nosotros-preview h3 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.sobre-nosotros-preview p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.boton-amarillo {
+    display: inline-block;
+    background-color: #f7a700;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+}
+
+.sobre-nosotros-preview .imagen {
+    flex: 1;
+    text-align: right;
+}
+
+.sobre-nosotros-preview .imagen img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
