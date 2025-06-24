@@ -1,11 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Inscripción</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
 </head>
 <body>
-    <h1>Hola inscripcion equipo</h1>
+    <h2>Inscripción</h2>
+    
+    <form method="POST">
+        <label>Disciplina:</label>
+        <select name="disciplina">
+            <option>Voley</option>
+            <option>Fútbol</option>
+        </select>
+
+        <label>Cantidad de equipos:</label>
+        <div>
+            <button type="button" onclick="cambiarCantidad(-1)">-</button>
+            <input type="text" name="cantidad" id="cantidad" value="1" readonly>
+            <button type="button" onclick="cambiarCantidad(1)">+</button>
+        </div>
+
+        <label>Colegio:</label>
+        <select name="colegio">
+            <option>ITR</option>
+            <option>Otro</option>
+        </select>
+
+        <label>Nombre del equipo:</label>
+        <input type="text" name="nombre_equipo" required>
+
+        <label>Categoria:</label>
+        <select name="categoria">
+            <option>Mayor</option>
+            <option>Juvenil</option>
+        </select>
+
+        <label>Email o telefono:</label>
+        <input type="text" name="contacto" required>
+
+        <p><strong>Precio total:</strong> ${{ total }}</p>
+
+        <button type="submit">Pagar</button>
+    </form>
+
+    {% if mensaje %}
+        <p style="color: green;">{{ mensaje }}</p>
+    {% endif %}
 </body>
 </html>
