@@ -2,9 +2,27 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Entrada General</title>
+    <title>Compra tu entrada</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Hola entrada general</h1>
+    <section class="compra-container">
+        <div class="imagen-compra">
+            <img src="{{ url_for('static', filename='img/domo.jpg') }}" alt="Cupulaaaaaa Renault">
+        </div>
+        <div class="info-compra">
+            <p style="font-size: 0.8em; text-align: right;">(debajo de Sobre nosotros)</p>
+            <h2>COMPRÁ TU ENTRADA GIL</h2>
+            <h1>$10.000</h1>
+            <p class="vigencia">Precio de entrada general válido hasta el 30 de abril</p>
+            <button>COMPRAR</button>
+            <ul>
+                <li>Shows en vivo y sorteos increíbles</li>
+                <li>Fotonas aseguradas con tus amigos</li>
+                <li>Actividades al aire libre todo el día</li>
+                <li>El mejor plan una vez al año</li>
+            </ul>
+        </div>
+    </section>
 </body>
 </html>
