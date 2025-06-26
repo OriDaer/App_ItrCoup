@@ -1,29 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}Inscripcion de equipos{% endblock %}
 
-<!DOCTYPE html>
+{% block content %}
+<!DOCTYPE html> 
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Compra tu entrada</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Compra entrada a Copa Renault</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <section class="compra-container">
-        <div class="imagen-compra">
-            <img src="{{ url_for('static', filename='img/domo.jpg') }}" alt="Cupula Renault">
-        </div>
-        <div class="info-compra">
-            <p style="font-size: 0.8em; text-align: right;">(debajo de Sobre nosotros)</p>
-            <h2>COMPRÁ TU ENTRADA</h2>
-            <h1>$10.000</h1>
-            <p class="vigencia">Precio de entrada general valido hasta el 30 de abril</p>
-            <button>COMPRAR</button>
-            <ul>
-                <li>Shows en vivo y sorteos</li>
-                <li>Fotos aseguradas con tus amigos</li>
-                <li>Actividades al aire libre todo el dia</li>
-                <li>El mejor plan una vez al año</li>
-            </ul>
-        </div>
-    </section>
+    <h1>Inscripcion Copa Renault</h1>
+    <form action="/inscripcion" method="POST">
+        <label>Cantidad de entradas:</label> 
+        <input type="number" name="cantidad" min="1" value="1"><br>
+
+        <label>Fecha:</label>
+        <input type="date" name="fecha" required><br>
+
+        <label>Correo o Telefono:</label>
+        <input type="text" name="contacto" required><br>
+
+        <button type="submit">PAGAR</button>
+    </form>
 </body>
 </html>
+{% endblock %}
