@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -189,7 +190,7 @@ nav a {
 
 /* PÁGINA INICIO - BIENVENIDA */
 .welcome {
-    background-image: url('/static/img/portada-trofeo.jpg'); /* Cambiá esta ruta si es necesario */
+    background-image: url('./img/copa renault.png');
     background-size: cover;
     background-position: center;
     color: black;
@@ -228,29 +229,12 @@ nav a {
 }
 
 .sobre-nosotros-preview {
+    background-image: url('./img/SNosotros-preview.png');
     display: flex;
     background-color: #f7db5d;
     padding: 60px 30px;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.sobre-nosotros-preview .texto {
-    flex: 1;
-    max-width: 500px;
-}
-
-.sobre-nosotros-preview h3 {
-    font-size: 2em;
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-}
-
-.sobre-nosotros-preview p {
-    font-size: 1em;
-    margin-bottom: 20px;
 }
 
 .boton-amarillo {
@@ -263,65 +247,23 @@ nav a {
     border: none;
 }
 
-.sobre-nosotros-preview .imagen {
+.sobre-nosotros-preview{
     flex: 1;
     text-align: right;
-}
-
-.sobre-nosotros-preview .imagen img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
 }
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-.compra-container {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.imagen-compra img {
-    width: 100%;
-    max-width: 600px;
-    object-fit: cover;
-}
-
-.info-compra {
-    background-color: #f5d94b;
-    padding: 30px;
-    flex: 1;
-    min-width: 300px;
-}
-
-.info-compra h2 {
-    font-weight: bold;
-    font-size: 1.5em;
-}
-
-.info-compra h1 {
-    font-size: 3em;
+/*inscripcion*/
+input, select, button {
     margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
 }
 
-.vigencia {
-    font-size: 0.9em;
-    color: #555;
-}
-
-.info-compra button {
-    background-color: #1c1c1c;
-    color: white;
+button {
+    background-color: orange;
     border: none;
-    padding: 12px 24px;
-    font-weight: bold;
+    color: black;
     cursor: pointer;
-    margin: 20px 0;
-}
-
-.info-compra ul {
-    list-style-type: disc;
-    padding-left: 20px;
 }

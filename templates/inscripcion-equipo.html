@@ -2,52 +2,40 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Inscripción</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+    <title>Inscripcion Copa Renault</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <h2>Inscripción</h2>
-    
-    <form method="POST">
+    <h1>Inscripcion Copa Renault</h1>
+    <form action="/inscripcion" method="POST">
+        <label>Fecha:</label>
+        <input type="date" name="fecha" required><br>
+
         <label>Disciplina:</label>
         <select name="disciplina">
-            <option>Voley</option>
-            <option>Fútbol</option>
-        </select>
+            <option value="voley">Voley</option>
+        </select><br>
 
-        <label>Cantidad de equipos:</label>
-        <div>
-            <button type="button" onclick="cambiarCantidad(-1)">-</button>
-            <input type="text" name="cantidad" id="cantidad" value="1" readonly>
-            <button type="button" onclick="cambiarCantidad(1)">+</button>
-        </div>
+        <label>Cantidad de Equipos:</label>
+        <input type="number" name="cantidad" min="1" value="1"><br>
 
         <label>Colegio:</label>
         <select name="colegio">
-            <option>ITR</option>
-            <option>Otro</option>
-        </select>
+            <option value="ITR">ITR</option>
+        </select><br>
 
         <label>Nombre del equipo:</label>
-        <input type="text" name="nombre_equipo" required>
+        <input type="text" name="nombre_equipo" required><br>
 
-        <label>Categoria:</label>
+        <label>Categoría:</label>
         <select name="categoria">
-            <option>Mayor</option>
-            <option>Juvenil</option>
-        </select>
+            <option value="mayor">Mayor</option>
+        </select><br>
 
-        <label>Email o telefono:</label>
-        <input type="text" name="contacto" required>
+        <label>Correo o Telefono:</label>
+        <input type="text" name="contacto" required><br>
 
-        <p><strong>Preciototal:</strong> ${{ total }}</p>
-
-        <button type="submit">Pagar</button>
+        <button type="submit">PAGAR</button>
     </form>
-
-    {% if mensaje %}
-        <p style="color: green;">{{ mensaje }}</p>
-    {% endif %}
 </body>
 </html>
