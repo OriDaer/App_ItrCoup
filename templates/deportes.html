@@ -1,12 +1,26 @@
-{% extends 'base.html' %}
-{% block title %}Fixture - ITR Coup{% endblock %}
-{% block content %}
-<section class="fixture">
-    <h2>Fixture de la Copa</h2>
-    <div class="fixture-grid">
-        <div class="partido">Equipo A vs Equipo B - 10:00</div>
-        <div class="partido">Equipo C vs Equipo D - 11:00</div>
-        <div class="partido">Equipo E vs Equipo F - 12:00</div>
+<section class="deportes">
+    <div class="deportes-header">
+        <h2>DEPORTES</h2>
+        <a href="#" class="ver-mas">VER MÁS</a>
+    </div>
+    <div class="deportes-grid">
+        <div class="deporte">
+            <img src="{{ url_for('static', filename='img/deportes/futbol.png') }}" alt="Fútbol">
+            <h3>FÚTBOL</h3>
+            <div class="linea"></div>
+            <a href="#" class="boton-reservar">RESERVAR AHORA</a>
+        </div>
+        <div class="deporte">
+            <img src="{{ url_for('static', filename='img/deportes/voley.png') }}" alt="Vóley">
+            <h3>VÓLEY</h3>
+            <div class="linea"></div>
+            <a href="#" class="boton-reservar">RESERVAR AHORA</a>
+        </div>
+        <div class="deporte">
+            <img src="{{ url_for('static', filename='img/deportes/basquet.png') }}" alt="Básquet">
+            <h3>BÁSQUET</h3>
+            <div class="linea"></div>
+            <a href="#" class="boton-reservar">RESERVAR AHORA</a>
+        </div>
     </div>
 </section>
-{% endblock %}

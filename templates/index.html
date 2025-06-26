@@ -24,5 +24,50 @@
     <img src="{{ url_for('static', filename='img/SNosotros-preview.png') }}" alt="Estudiantes con bombos">
     </div>
 </section>
+<section class="compra-container">
+        <div class="imagen-compra">
+            <img src="{{ url_for('static', filename='./img/foto_cupula_vieja.jpg') }}" alt="Cupula Renault">
+        </div>
+        <div class="info-compra">
+            <h2>COMPRÁ TU ENTRADA</h2>
+            <h1>$10.000</h1>
+            <p class="vigencia">Precio de entrada general valido hasta el 30 de abril</p>
+            <button>COMPRAR</button>
+            <ul>
+                <li>Shows en vivo y sorteos</li>
+                <li>Fotos aseguradas con tus amigos</li>
+                <li>Actividades al aire libre todo el dia</li>
+                <li>El mejor plan una vez al año</li>
+            </ul>
+        </div>
+    </section>
+    <!-- Sección Deportes -->
+<section class="deportes">
+    <div class="deportes-header">
+        <h2>DEPORTES</h2>
+        <a href="#" class="ver-mas">VER MÁS</a>
+    </div>
+    <div class="deportes-grid">
+        <div class="deporte">
+            <img src="{{ url_for('static', filename='img/deportes/futbol.png') }}" alt="Fútbol">
+            <h3>FÚTBOL</h3>
+            <div class="linea"></div>
+            <a href="#" class="boton-reservar">RESERVAR AHORA</a>
+        </div>
+        <div class="deporte">
+            <img src="{{ url_for('static', filename='img/deportes/voley.png') }}" alt="Vóley">
+            <h3>VÓLEY</h3>
+            <div class="linea"></div>
+            <a href="#" class="boton-reservar">RESERVAR AHORA</a>
+        </div>
+        <div class="deporte">
+            <img src="{{ url_for('static', filename='img/deportes/basquet.png') }}" alt="Básquet">
+            <h3>BÁSQUET</h3>
+            <div class="linea"></div>
+            <a href="#" class="boton-reservar">RESERVAR AHORA</a>
+        </div>
+    </div>
+</section>
+
 
 {% endblock %}
