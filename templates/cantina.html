@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="entradas">
+    <h1>Productos de la Cantina</h1>
+    <div class="opciones">
+        {% for producto in productos %}
+        <div class="opcion">
+            <img src="{{ url_for('static', filename=producto.imagen) }}" alt="{{ producto.nombre }}" class="producto-imagen">
+            <p><strong>{{ producto.nombre }}</strong></p>
+            <p>$ {{ producto.precio }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
