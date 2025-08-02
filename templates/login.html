@@ -1,12 +1,36 @@
 {% extends 'base.html' %}
 {% block title %}Login - ITR Coup{% endblock %}
 {% block content %}
-<section class="login">
-    <h2>Iniciar sesión</h2>
-    <form method="POST">
-        <input type="text" placeholder="Usuario">
-        <input type="password" placeholder="Contraseña">
-        <button type="submit">Ingresar</button>
-    </form>
-</section>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="login">
+        <form method="POST" action="/iniciar_sesion">
+            <h2>Iniciar Sesión</h2>
+            <label>Usuario:
+            <input type="text" name="usuario" id="usuario" required>
+            </label>
+            <label>Contraseña:
+            <input type="password" name="contraseña" id="contraseña" required>
+            </label>
+            <button type="submit">Ingresar</button>
+        </form>
+        {% if error %}
+            <p style="color: red;">{{ error }}</p>
+        {% endif %}
+    </div>
+
+    <footer class="footer">
+        <div class="footer-col">
+            <h2 class="logo">Copa Renault</h2>
+            <p>Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
 {% endblock %}

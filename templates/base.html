@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}ITR Coup{% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
     <header>
@@ -16,6 +16,7 @@
             <a href="{{ url_for('deportes') }}">Deportes</a>
             <a href="{{ url_for('login') }}">Login</a>
         </nav>  
+        <a href="/logout">Cerrar sesion</a>
     </header>
 
     <main> 
@@ -26,7 +27,7 @@
     <div class="footer-col">
         <h2 class="logo">ITR<br>COUP</h2>
         <a href="https://www.instagram.com/coparenault" target="_blank">
-            <img src="{{ url_for('static', filename='img/instagram-icon.png') }}" alt="Instagram" class="social-icon">
+            <img src="static\css\img\instagram.jpeg" alt="Instagram" class="social-icon">
         </a>
     </div>
 
@@ -55,7 +56,7 @@
 
         <h3>DESCARGA NUESTRA APP EN</h3>
         <a href="#" target="_blank">
-            <img src="{{ url_for('static', filename='img/playstore.png') }}" alt="Descargar en Play Store" class="store-icon">
+            <img src="static\css\img\playstore.png" alt="Descargar Play Store" class="store-icon">
         </a>
     </div>
 </footer>

@@ -229,7 +229,6 @@ nav a {
 }
 
 .sobre-nosotros-preview {
-    background-image: url('./img/SNosotros-preview.png');
     display: flex;
     background-color: #f7db5d;
     padding: 60px 30px;
@@ -247,13 +246,6 @@ nav a {
     border: none;
 }
 
-.sobre-nosotros-preview{
-    flex: 1;
-    text-align: right;
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
 /*inscripcion*/
 input, select, button {
     margin: 10px 0;
@@ -282,12 +274,15 @@ button {
     max-width: 1200px;
     width: 100%;
 }
-.imagen_compra {
-    flex: 1;
-    position: relative;
-    height: 400px; /* Altura fija para mantener proporciones */
-    overflow: hidden;
+.compra-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9e47d;
+    gap: 40px;
+    flex-wrap: wrap; /* por si se achica en móviles */
 }
+
 .imagen-entrada img {
     width: 100%;
     height: 100%;
@@ -396,4 +391,37 @@ button {
 
 .boton-reservar:hover {
     background-color: #d1a739;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-color: #fff6c1;
+}
+
+.login form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    width: 100%;
+    max-width: 350px;
+}
+
+.login input, .login button {
+    width: 100%;
+}
+
+.login button {
+    background-color: #000;
+    color: yellow;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.login button:hover {
+    background-color: #222;
 }
