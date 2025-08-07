@@ -331,18 +331,19 @@ button {
     padding-left: 20px;
     font-size: 16px;
 }
+.deportes{
+    background-color: #f9e47d;
+}
 .deportes-grid {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 40px;
-    background-color: white;
     padding: 40px 20px;
     border-radius: 10px;
 }
 
 .deporte {
-    background-color: #fff;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     text-align: center;
     max-width: 220px;
@@ -424,4 +425,43 @@ button {
 
 .login button:hover {
     background-color: #222;
+}
+
+.fondo-amarillo {
+    background-color: #fff200;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.formulario-equipo input,
+.formulario-equipo select {
+    width: 100%;
+    max-width: 500px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.formulario-equipo h3 {
+    margin-top: 20px;
+    color: #333;
+}
+
+.confirmacion-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff200;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.confirmacion-container h1 {
+    color: #1a5d1a;
+}
+
+.confirmacion-container p {
+    font-size: 1.2em;
+    margin-top: 10px;
 }

@@ -1,51 +1,51 @@
 {% extends 'base.html' %}
-{% block title %}Inscripcion de equipos{% endblock %}
+{% block title %}Inscripción de equipos{% endblock %}
 
 {% block content %}
+<h1>Inscripción Copa Renault</h1>
+<p>Completa el formulario para inscribir a tu equipo en la copa.</p>
 
-<!DOCTYPE html> 
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Inscripcion Copa Renault</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
-    <h1>Inscripcion Copa Renault</h1>
-    <p>Completa el formulario para inscribir a tu equipo en la copa.</p>
-    <h1>si elegiste antes la disciplina entonces t debe salir la elegida, q se entienda cm q es un solo equipo al q se inscribe ,
-        que se indique la fecha predeterminada y q le diga cuanto debera pagar, que ingrese todos los datos del equipo y del representante, q ponga el telefono y correo de contacto
-    </h1>
-    <form action="/inscripcion" method="POST">
-        <label>Fecha:</label>
-        <input type="date" name="fecha" required><br>
+<form action="/inscripcion" method="POST" class="formulario-equipo">
+    <input type="hidden" name="deporte" value="{{ deporte }}">
+    
+    <p>La fecha del evento será el 17 de mayo del corriente año.</p>
+    <p><strong>La disciplina a la que te estás por inscribir es:</strong> {{ deporte|upper }}</p>
 
-        <label>Disciplina:</label>
-        <select name="disciplina">
-            <option value="voley">Voley</option>
-        </select><br>
+    <label>Colegio:</label>
+    <select name="colegio">
+        <option value="ITR">ITR</option>
+        <option value="San Jose">San José</option>
+        <option value="San Agustin">Santo Tomás</option>
+        <option value="Santa Maria">Esclavas</option>
+    </select><br>
 
-        <label>Cantidad de Equipos:</label>
-        <input type="number" name="cantidad" min="1" value="1"><br>
+    <label>Nombre del equipo:</label>
+    <input type="text" name="nombre_equipo" required><br>
 
-        <label>Colegio:</label>
-        <select name="colegio">
-            <option value="ITR">ITR</option>
-        </select><br>
+    <label>Categoría:</label>
+    <select name="categoria">
+        <option value="mayor">Mayor</option>
+        <option value="menor">Menor</option>
+        <option value="intermedia">Intermedia</option>
+    </select><br>
 
-        <label>Nombre del equipo:</label>
-        <input type="text" name="nombre_equipo" required><br>
+    <label>Correo o Teléfono:</label>
+    <input type="text" name="contacto" required><br>
 
-        <label>Categoría:</label>
-        <select name="categoria">
-            <option value="mayor">Mayor</option>
-        </select><br>
+    <h3>Datos de los Jugadores:</h3>
+    {% for i in range(1, 11) %}
+        <label>Jugador {{ i }} - Nombre completo:</label>
+        <input type="text" name="jugador_nombre_{{ i }}"><br>
+        <label>Jugador {{ i }} - DNI:</label>
+        <input type="text" name="jugador_dni_{{ i }}"><br>
+    {% endfor %}
 
-        <label>Correo o Telefono:</label>
-        <input type="text" name="contacto" required><br>
+    <h3>Adulto Responsable:</h3>
+    <label>Nombre del adulto responsable:</label>
+    <input type="text" name="adulto_nombre"><br>
+    <label>DNI del adulto responsable:</label>
+    <input type="text" name="adulto_dni"><br>
 
-        <button type="submit">PAGAR</button>
-    </form>
-</body>
-</html>
+    <button type="submit">ENVIAR</button>
+</form>
 {% endblock %}

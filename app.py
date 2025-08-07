@@ -22,6 +22,12 @@ class Producto(db.Model):
     precio = db.Column(db.Numeric(10,2), nullable=False)
     imagen = db.Column(db.String(100), nullable=False)
 
+
+class Inscripcion(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    cantidad = db.Column(db.Integer, nullable=False)
+    contacto = db.Column(db.String(120), nullable=False)
+    nombre_transferencia = db.Column(db.String(120), nullable=False)
 @app.route('/')
 def home():
     return redirect(url_for('login'))
@@ -109,13 +115,25 @@ def cantina():
 def entrada_general():
     if "usuario" not in session:
         return redirect("/login")
+    #precio=210.000
     return render_template("entrada-general.html", usuario=session["usuario"])
 
 @app.route('/inscripcion-equipo')
 def inscripcion_equipo():
     if "usuario" not in session:
         return redirect("/login")
+    deporte = request.args.get('deporte', 'No especificado')
+    print("Deporte seleccionado:", deporte) 
     return render_template("inscripcion-equipo.html", usuario=session["usuario"])
+
+@app.route('/inscripcion', methods=['POST'])
+def inscripcion():
+    if "usuario" not in session:
+        return redirect("/login")
+    contacto = request.form.get('contacto')
+    deporte = request.form.get('deporte')
+    return render_template("confirmacion.html", contacto=contacto, deporte=deporte, usuario=session["usuario"])
+
 
 @app.route('/logout')
 def logout():

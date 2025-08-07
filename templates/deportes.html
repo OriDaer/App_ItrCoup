@@ -13,19 +13,19 @@
             <img src="{{ url_for('static', filename='css/img/deportes/futbol.png') }}" alt="Fútbol">
             <h3>FÚTBOL</h3>
             <div class="linea"></div>
-            <a href="inscripcion-equipo" class="boton-reservar">RESERVAR AHORA</a>
+            <a href="{{ url_for('inscripcion_equipo', deporte='futbol') }}" class="boton-reservar">RESERVAR AHORA</a>
         </div>
         <div class="deporte">
             <img src="{{ url_for('static', filename='css/img/deportes/voley.png') }}" alt="Vóley">
             <h3>VÓLEY</h3>
             <div class="linea"></div>
-            <a href="inscripcion-equipo" class="boton-reservar">RESERVAR AHORA</a>
+            <a href="{{ url_for('inscripcion_equipo', deporte='voley') }}" class="boton-reservar">RESERVAR AHORA</a>
         </div>
         <div class="deporte">
             <img src="{{ url_for('static', filename='css/img/deportes/basquet.png') }}" alt="Básquet">
             <h3>BÁSQUET</h3>
             <div class="linea"></div>
-            <a href="inscripcion-equipo" class="boton-reservar">RESERVAR AHORA</a>
+            <a href="{{ url_for('inscripcion_equipo', deporte='basquet') }}" class="boton-reservar">RESERVAR AHORA</a>
         </div>
     </div>
 </section>

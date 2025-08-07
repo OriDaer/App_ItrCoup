@@ -1,28 +1,41 @@
 {% extends 'base.html' %}
-{% block title %}Inscripcion de equipos{% endblock %}
-
+{% block title %}Inscripción de equipos{% endblock %}
 {% block content %}
-<!DOCTYPE html> 
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Compra entrada a Copa Renault</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
-    <h1>Inscripcion Copa Renault</h1>
-    <form action="/inscripcion" method="POST">
-        <label>Cantidad de entradas:</label> 
-        <input type="number" name="cantidad" min="1" value="1"><br>
 
-        <label>Fecha:</label>
-        <input type="date" name="fecha" required><br>
+<div class="entradagralCompra">
+    <h1>Inscripción Copa Renault</h1>
+    <form action="/inscripcion" method="POST" id="formulario">
+        <label for="cantidad">Cantidad de entradas:</label>
+        <input type="number" id="cantidad" name="cantidad" min="1" value="1"><br>
 
-        <label>Correo o Telefono:</label>
-        <input type="text" name="contacto" required><br>
+        <label for="contacto">Correo o Teléfono:</label>
+        <input type="text" id="contacto" name="contacto" required><br>
 
-        <button type="submit">PAGAR</button>
+        <!--<p>El precio total es: $<span id="total">{{ precio }}</span></p>
+-->
+        <div id="transferenciaInfo" style="display: none; margin-top: 20px;">
+            <p>Transferir a alias: <strong>copaITR2025.mp</strong></p>
+
+            <label for="nombre_transferencia">A nombre de:</label>
+            <input type="text" id="nombre_transferencia" name="nombre_transferencia" required><br><br>
+
+            <p>Se te enviará un mensaje lo antes posible notificándote el estado de tu inscripción.</p>
+
+            <button type="submit">Aceptar</button>
+        </div>
+
+        <button type="button" onclick="mostrarTransferencia()">PAGAR</button>
     </form>
-</body>
-</html>
+</div>
+
+<script>
+    function mostrarTransferencia() {
+        const cantidad = parseInt(document.getElementById("cantidad").value);
+        const precioUnitario = {precio};
+        const total = cantidad * precioUnitario;
+        document.getElementById("total").innerText = total;
+        document.getElementById("transferenciaInfo").style.display = "block";
+    }
+</script>
+
 {% endblock %}
